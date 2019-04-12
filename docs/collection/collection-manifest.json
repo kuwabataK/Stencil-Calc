@@ -1,0 +1,68 @@
+{
+  "components": [
+    {
+      "tag": "ks-calc",
+      "dependencies": [],
+      "componentClass": "KsCalc",
+      "componentPath": "components/ks-calc/ks-calc.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ks-calc/ks-calc.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "input",
+          "type": "String",
+          "attr": "input"
+        }
+      ],
+      "states": [
+        {
+          "name": "_input"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "my-component",
+      "dependencies": [],
+      "componentClass": "MyComponent",
+      "componentPath": "components/my-component/my-component.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/my-component/my-component.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "first",
+          "type": "String",
+          "attr": "first"
+        },
+        {
+          "name": "last",
+          "type": "String",
+          "attr": "last"
+        },
+        {
+          "name": "middle",
+          "type": "String",
+          "attr": "middle"
+        }
+      ],
+      "shadow": true
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.16.2",
+    "typescriptVersion": "3.2.2"
+  },
+  "bundles": []
+}
