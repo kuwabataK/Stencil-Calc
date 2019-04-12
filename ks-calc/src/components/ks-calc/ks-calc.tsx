@@ -1,5 +1,5 @@
-import { Component, Prop } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component, Prop, State } from '@stencil/core';
+import { calc } from '../../utils/utils';
 
 @Component({
   tag: 'ks-calc',
@@ -8,20 +8,28 @@ import { format } from '../../utils/utils';
 })
 export class KsCalc {
   /**
-   * 入力
+   * 外からの入力
    */
-  @Prop() input: string;
+  @Prop() input: string = "12+4"
 
-  /**
-   * 出力
-   */
-  @Prop() output: number;
+  @State() _input:string = "12+4"
 
-  // private getText(): string {
-  //   return format(this.first, this.middle, this.last);
-  // }
+  componentWillLoad() {
+    return this._input = this.input
+  }
+
+  private calcText(){
+    return calc(this._input);
+  }
+
+  handleChange(event) {
+    this._input = event.target.value;
+  }
 
   render() {
-    return <div>Hello, World! I'm {this.input}</div>;
+    return <div>
+      <input value={this._input} onChange={(event)=>this.handleChange(event)} />
+      <div>{this.calcText()}</div>
+    </div>
   }
 }

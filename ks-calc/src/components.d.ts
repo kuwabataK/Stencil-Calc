@@ -12,6 +12,19 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface KsCalc {
+    /**
+    * 外からの入力
+    */
+    'input': string;
+  }
+  interface KsCalcAttributes extends StencilHTMLAttributes {
+    /**
+    * 外からの入力
+    */
+    'input'?: string;
+  }
+
   interface MyComponent {
     /**
     * The first name
@@ -40,49 +53,19 @@ export namespace Components {
     */
     'middle'?: string;
   }
-  interface KsCalc {
-
-    /**
-     * 入力する文字列
-     */
-    input?:string
-
-    /**
-     * 計算結果
-     */
-    output?:number
-
-  }
-  interface KsCalcAttributes extends StencilHTMLAttributes {
-    /**
-     * 入力する文字列
-     */
-    input?:string
-
-    /**
-     * 計算結果
-     */
-    output?:number
-  }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'MyComponent': Components.MyComponent;
     'KsCalc': Components.KsCalc;
+    'MyComponent': Components.MyComponent;
   }
 
   interface StencilIntrinsicElements {
-    'my-component': Components.MyComponentAttributes;
     'ks-calc': Components.KsCalcAttributes;
+    'my-component': Components.MyComponentAttributes;
   }
 
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
 
   interface HTMLKsCalcElement extends Components.KsCalc, HTMLStencilElement {}
   var HTMLKsCalcElement: {
@@ -90,14 +73,20 @@ declare global {
     new (): HTMLKsCalcElement;
   };
 
+  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
+  var HTMLMyComponentElement: {
+    prototype: HTMLMyComponentElement;
+    new (): HTMLMyComponentElement;
+  };
+
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement
     'ks-calc': HTMLKsCalcElement
+    'my-component': HTMLMyComponentElement
   }
 
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
     'ks-calc': HTMLKsCalcElement;
+    'my-component': HTMLMyComponentElement;
   }
 
 
