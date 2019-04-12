@@ -21,8 +21,10 @@ export function calc(input: string): number {
   if (inputNums == null || inputOpe == null){
     return 0
   }
-
   if(inputNums.length <=1 || inputOpe.length <= 0 ){
+    return 0
+  }
+  if(inputNums.length - inputOpe.length !== 1 ){
     return 0
   }
 
