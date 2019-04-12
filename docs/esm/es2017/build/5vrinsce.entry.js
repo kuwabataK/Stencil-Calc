@@ -1,6 +1,6 @@
-const h = window.mycomponent.h;
+import { h } from '../mycomponent.core.js';
 
-import { b as format } from './chunk-f21dfd94.js';
+import { b as format } from './chunk-a9a7a476.js';
 
 class MyComponent {
     getText() {

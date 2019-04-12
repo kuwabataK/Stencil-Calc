@@ -1,0 +1,36 @@
+{
+  "tags": [
+    {
+      "label": "ks-calc",
+      "description": "",
+      "attributes": [
+        {
+          "label": "input",
+          "description": "外からの入力",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "my-component",
+      "description": "",
+      "attributes": [
+        {
+          "label": "first",
+          "description": "The first name",
+          "required": false
+        },
+        {
+          "label": "last",
+          "description": "The last name",
+          "required": false
+        },
+        {
+          "label": "middle",
+          "description": "The middle name",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

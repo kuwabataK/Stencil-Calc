@@ -1,12 +1,9 @@
-const h = window.mycomponent.h;
+import { h } from '../mycomponent.core.js';
 
-import { a as calc } from './chunk-f21dfd94.js';
+import { a as calc } from './chunk-a9a7a476.js';
 
 class KsCalc {
     constructor() {
-        /**
-         * 外からの入力
-         */
         this.input = "12+4";
         this._input = "12+4";
     }

@@ -1,5 +1,8 @@
-import { calc } from '../../utils/utils';
-export class KsCalc {
+import { h } from '../mycomponent.core.js';
+
+import { a as calc } from './chunk-a9a7a476.js';
+
+class KsCalc {
     constructor() {
         this.input = "12+4";
         this._input = "12+4";
@@ -29,5 +32,7 @@ export class KsCalc {
             "attr": "input"
         }
     }; }
-    static get style() { return "/**style-placeholder:ks-calc:**/"; }
+    static get style() { return ""; }
 }
+
+export { KsCalc };
