@@ -25,7 +25,6 @@ export class KsCalc {
   handleChange(event) {
     this._input = event.target.value;
   }
-
   render() {
     return <div>
       <input value={this._input} onChange={(event)=>this.handleChange(event)} />
