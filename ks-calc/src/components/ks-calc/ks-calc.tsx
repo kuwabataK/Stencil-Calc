@@ -21,13 +21,10 @@ export class KsCalc {
   private calcText(){
     return calc(this._input);
   }
-
-  handleChange(event) {
-    this._input = event.target.value;
-  }
+  
   render() {
     return <div>
-      <input value={this._input} onChange={(event)=>this.handleChange(event)} />
+      <input value={this._input} onChange={(event)=>this._input = event.target["value"]} />
       <div>{this.calcText()}</div>
     </div>
   }
