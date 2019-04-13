@@ -17,10 +17,10 @@
   <script>
     window.addEventListener("load", (evt) => {
       var components = document.querySelectorAll("ks-calc");
-      for (var i = 0; i < components.length; i++) {
+      for (let comp of components) {
 
         // ks-calcコンポーネントで発火されたchangeResultイベントを受け取る事もできる
-        components[i].addEventListener("changeResult", (evt) => {
+        comp.addEventListener("changeResult", (evt) => {
           console.log("計算結果は" + evt.detail);
         });
       }
