@@ -16,15 +16,15 @@ export function calc(input: string): number {
 
   const inputNums = input.split(/\+|\-|\*|\//).map(s => parseInt(s))
   // const inputNums = input.split(/ \+ | \- | \* | \/ /)
-  const inputOpe = input.split(/\d+/).filter( s => s !== "")
+  const inputOpe = input.split(/\d+/).filter(s => s !== "")
 
-  if (inputNums == null || inputOpe == null){
+  if (inputNums == null || inputOpe == null) {
     return 0
   }
-  if(inputNums.length <=1 || inputOpe.length <= 0 ){
+  if (inputNums.length <= 1 || inputOpe.length <= 0) {
     return 0
   }
-  if(inputNums.length - inputOpe.length !== 1 ){
+  if (inputNums.length - inputOpe.length !== 1) {
     return 0
   }
 

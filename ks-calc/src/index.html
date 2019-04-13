@@ -13,12 +13,12 @@
   <ks-calc input="33-4"></ks-calc>
 
   <script>
-    window.addEventListener("load", function (evt) {
+    window.addEventListener("load", (evt) => {
       var components = document.querySelectorAll("ks-calc");
       for (var i = 0; i < components.length; i++) {
 
         // ks-calcコンポーネントで発火されたchangeResultイベントを受け取る事もできる
-        components[i].addEventListener("changeResult", function (evt) {
+        components[i].addEventListener("changeResult", (evt) => {
           console.log("計算結果は" + evt.detail);
         });
       }
