@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
@@ -7,9 +8,24 @@
   <!-- 公開先のmycomponent.jsを指定 -->
   <script src="https://kuwabatak.github.io/Stencil-Calc/mycomponent.js"></script>
 </head>
+
 <body>
   <!-- 以下が今回作ったWebComponent -->
   <ks-calc input="33-4"></ks-calc>
 
+  <!-- コンポーネントで発火したイベントを受け取るためのコード -->
+  <script>
+    window.addEventListener("load", function (evt) {
+      var components = document.querySelectorAll("ks-calc");
+      for (var i = 0; i < components.length; i++) {
+
+        // ks-calcコンポーネントで発火されたchangeResultイベントを受け取る事もできる
+        components[i].addEventListener("changeResult", function (evt) {
+          console.log(evt.detail);
+        });
+      }
+    });
+  </script>
 </body>
+
 </html>

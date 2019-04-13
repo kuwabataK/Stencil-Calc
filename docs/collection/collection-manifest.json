@@ -24,6 +24,11 @@
           "name": "_input"
         }
       ],
+      "events": [
+        {
+          "event": "changeResult"
+        }
+      ],
       "shadow": true
     },
     {

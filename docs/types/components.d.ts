@@ -23,6 +23,10 @@ export namespace Components {
     * 外からの入力
     */
     'input'?: string;
+    /**
+    * 計算結果が変わったときに結果を返すEvent Angularで言うところの '@Output'
+    */
+    'onChangeResult'?: (event: CustomEvent) => void;
   }
 
   interface MyComponent {

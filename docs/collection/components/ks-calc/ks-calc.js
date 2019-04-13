@@ -10,12 +10,13 @@ export class KsCalc {
     calcText() {
         return calc(this._input);
     }
-    handleChange(event) {
-        this._input = event.target.value;
+    handleInputChange(event) {
+        this._input = event.target["value"];
+        this.changeResult.emit(this.calcText());
     }
     render() {
         return h("div", null,
-            h("input", { value: this._input, onChange: (event) => this.handleChange(event) }),
+            h("input", { value: this._input, onChange: (event) => this.handleInputChange(event) }),
             h("div", null, this.calcText()));
     }
     static get is() { return "ks-calc"; }
@@ -29,5 +30,12 @@ export class KsCalc {
             "attr": "input"
         }
     }; }
+    static get events() { return [{
+            "name": "changeResult",
+            "method": "changeResult",
+            "bubbles": true,
+            "cancelable": true,
+            "composed": true
+        }]; }
     static get style() { return "/**style-placeholder:ks-calc:**/"; }
 }

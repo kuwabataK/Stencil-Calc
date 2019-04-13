@@ -1,2 +1,2 @@
 // mycomponent: Host Data, ES Module/es2017 Target
-export const COMPONENTS = [["ks-calc","ni6a88vh",1,[["_input",16],["input",1,0,1,2]],1],["my-component","5vrinsce",1,[["first",1,0,1,2],["last",1,0,1,2],["middle",1,0,1,2]],1]]
+export const COMPONENTS = [["ks-calc","ozojw6g3",1,[["_input",16],["input",1,0,1,2]],1],["my-component","5vrinsce",1,[["first",1,0,1,2],["last",1,0,1,2],["middle",1,0,1,2]],1]]
