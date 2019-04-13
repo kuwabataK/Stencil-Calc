@@ -4,6 +4,10 @@
 
 This is a simple calculatator web component created by StencilJS.
 
+## demo
+
+https://codepen.io/kuwabatak/pen/YMxZwN
+
 ## Usage
 
 import by GitHUb Page
