@@ -16,7 +16,7 @@ import by GitHUb Page
   <script src="https://kuwabatak.github.io/Stencil-Calc/mycomponent.js"></script>
 ```
 
-and use `<ks-calc input="33-4"></ks-calc>` tags.
+and use `<ks-calc></ks-calc>` tags.
 
 example
 
