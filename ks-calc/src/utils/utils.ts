@@ -15,7 +15,6 @@ export function format(first: string, middle: string, last: string): string {
 export function calc(input: string): number {
 
   const inputNums = input.split(/\+|\-|\*|\//).map(s => parseInt(s))
-  // const inputNums = input.split(/ \+ | \- | \* | \/ /)
   const inputOpe = input.split(/\d+/).filter(s => s !== "")
 
   if (inputNums == null || inputOpe == null) {
